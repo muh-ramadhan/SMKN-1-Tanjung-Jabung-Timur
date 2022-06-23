@@ -8,6 +8,11 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\FilterSuperadmin;
+use App\Filters\FilterAdministrator;
+use App\Filters\FilterGuru;
+use App\Filters\FilterTatausaha;
+use App\Filters\FilterPesertadidik;
 
 class Filters extends BaseConfig
 {
@@ -23,6 +28,11 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'filtersuperadmin'      => FilterSuperadmin::class,
+        'filteradministrator'   => FilterAdministrator::class,
+        'filterguru'            => FilterGuru::class,
+        'filtertatausaha'       => FilterTatausaha::class,
+        'filterpesertadidik'    => FilterPesertadidik::class,
     ];
 
     /**
@@ -33,11 +43,116 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
+            'filtersuperadmin'    =>
+            [
+                'except' =>
+                [
+                    'register', 'register/*',
+                    'login',    'login/*',
+                    'wilayah', 'wilayah/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filteradministrator'    =>
+            [
+                'except' =>
+                [
+                    'register', 'register/*',
+                    'login',    'login/*',
+                    'wilayah', 'wilayah/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filterguru'    =>
+            [
+                'except' =>
+                [
+                    'register', 'register/*',
+                    'login',    'login/*',
+                    'wilayah', 'wilayah/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filtertatausaha'    =>
+            [
+                'except' =>
+                [
+                    'register', 'register/*',
+                    'login',    'login/*',
+                    'wilayah', 'wilayah/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filterpesertadidik'    =>
+            [
+                'except' =>
+                [
+                    'register', 'register/*',
+                    'login',    'login/*',
+                    'wilayah', 'wilayah/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
         ],
         'after' => [
+            'filtersuperadmin'    =>
+            [
+                'except' =>
+                [
+                    'logout', 'logout/*',
+                    'superadmin', 'superadmin/*',
+                    'wilayah', 'wilayah/*',
+                    'beranda', 'beranda/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filteradministrator'    =>
+            [
+                'except' =>
+                [
+                    'logout', 'logout/*',
+                    'administrator', 'administrator/*',
+                    'wilayah', 'wilayah/*',
+                    'beranda', 'beranda/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filterguru'    =>
+            [
+                'except' =>
+                [
+                    'logout', 'logout/*',
+                    'guru', 'guru/*',
+                    'wilayah', 'wilayah/*',
+                    'beranda', 'beranda/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filtertatausaha'    =>
+            [
+                'except' =>
+                [
+                    'logout', 'logout/*',
+                    'tatausaha', 'tatausaha/*',
+                    'wilayah', 'wilayah/*',
+                    'beranda', 'beranda/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
+            'filterpesertadidik'    =>
+            [
+                'except' =>
+                [
+                    'logout', 'logout/*',
+                    'pesertadidik', 'pesertadidik/*',
+                    'wilayah', 'wilayah/*',
+                    'beranda', 'beranda/*',
+                    '/', //Routing Ke Controller Home
+                ]
+            ],
             'toolbar',
             // 'honeypot',
             // 'secureheaders',
