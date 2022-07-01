@@ -155,7 +155,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Guru'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Guru</p>
                                     </a>
@@ -167,37 +167,37 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/pesertadidik'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Pesertadidik'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Peserta Didik</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/jurusan'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Jurusan'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Jurusan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/pekerjaan'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Pekerjaan'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Pekerjaan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/pendidikan'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Pendidikan'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Pendidikan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/penghasilan'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Penghasilan'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Penghasilan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('Superadmin/agama'); ?>" class="nav-link">
+                                    <a href="<?= base_url('Superadmin/Agama'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Agama</p>
                                     </a>
@@ -206,6 +206,18 @@
                                     <a href="<?= base_url('Superadmin/Pembayaran'); ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Pembayaran</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('Superadmin/Kelas'); ?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kelas</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="<?= base_url('Superadmin/MataPelajaran'); ?>" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Mata Pelajaran</p>
                                     </a>
                                 </li>
                             </ul>

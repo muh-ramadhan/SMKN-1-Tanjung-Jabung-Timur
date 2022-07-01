@@ -19,7 +19,10 @@ class GuruModel extends Model
         'rfid', 
         'nama_lengkap_guru', 
         'nip_guru', 
-        'nuptk_guru'
+        'nuptk_guru',
+        'jenis_kelamin_guru', 
+        'id_kelas', 
+        'id_matapelajaran', 
     ];
 
     // Dates

@@ -46,7 +46,7 @@ class Login extends BaseController
 				'kata_sandi'  => $kata_sandi
 			])
 			->get()
-			->getRowArray();;
+			->getRowArray();
             if ($cek) {
                 //Periksa Data Jika Datanya Cocok
                 session()->set('log', true);

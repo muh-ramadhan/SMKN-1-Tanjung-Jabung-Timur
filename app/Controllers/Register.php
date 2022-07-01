@@ -12,7 +12,7 @@ class Register extends BaseController
 {
     public function __construct()
     {
-        helper(['form', 'date', 'inflector']);
+        helper(['form', 'date', 'inflector', 'text']);
         $this->LoginModel = new LoginModel();
         $this->PesertaDidikModel = new PesertaDidikModel();
         $this->JalurMasukModel = new JalurMasukModel();
@@ -156,9 +156,9 @@ class Register extends BaseController
                 'id_jalur_masuk' => $this->request->getPost('id_jalur_masuk'),
                 'id_jurusan' => $this->request->getPost('id_jurusan'),
                 'nisn' => $this->request->getPost('nisn'),
-                'nama_lengkap_pesertadidik' => ucwords(strtolower($this->request->getPost(('nama_lengkap_pesertadidik')))),
+                'nama_lengkap_pesertadidik' => reduce_multiples(ucwords(strtolower($this->request->getPost('nama_lengkap_pesertadidik'))), ' ', true),
                 'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
-                'tempat_lahir_pesertadidik' => ucwords(strtolower($this->request->getPost('tempat_lahir_pesertadidik'))),
+                'tempat_lahir_pesertadidik' => reduce_multiples(ucwords(strtolower($this->request->getPost('tempat_lahir_pesertadidik'))), ' ', true),
                 'tanggal_lahir_peserta_didik' => $tahun . '-' . $bulan . '-' . $tanggal,
             ];
             $PesertaDidikModel->insert($data);
